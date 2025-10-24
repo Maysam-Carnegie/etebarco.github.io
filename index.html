@@ -1,1 +1,103 @@
-<title>403</title>
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>403 – دسترسی غیرمجاز</title>
+  <style>
+    :root {
+      --bg: #0f1417;
+      --card: #161c20;
+      --text: #e6e6e6;
+      --accent: #f5c400;
+      --muted: #9aa3a9;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: radial-gradient(1200px 800px at 50% 0%, #12181c 0%, var(--bg) 60%);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Vazirmatn", "Noto Naskh Arabic", sans-serif;
+    }
+    .wrap {
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .card {
+      width: min(900px, 96vw);
+      background: linear-gradient(180deg, #151a1e 0%, var(--card) 100%);
+      border: 1px solid #232a30;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      overflow: hidden;
+    }
+    .content {
+      padding: 28px;
+      text-align: center;
+    }
+    .art {
+      display: block;
+      width: 100%;
+      max-width: 820px;
+      margin: 0 auto 8px;
+      height: auto;
+      border-radius: 12px;
+    }
+    h1 {
+      margin: 10px 0 0;
+      font-size: clamp(22px, 3.2vw, 28px);
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+    p.lead {
+      margin: 8px 0 24px;
+      color: var(--muted);
+      font-size: clamp(14px, 2.4vw, 16px);
+      line-height: 1.7;
+    }
+    hr {
+      border: none;
+      border-top: 1px dashed #2b3339;
+      margin: 18px auto 16px;
+      width: 85%;
+    }
+    .footer {
+      text-align: center;
+      direction: ltr; /* make the English footer read naturally */
+      font-size: 15px;
+      line-height: 1.6;
+      color: #ccd3d8;
+      padding: 0 10px 14px;
+    }
+    .footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card" aria-labelledby="title">
+      <div class="content">
+        <!-- Replace the src with your actual image path -->
+        <img src="images/403.png" alt="403 – Access Denied" class="art" />
+        <h1 id="title">۴۰۳ – دسترسی غیرمجاز</h1>
+        <p class="lead">
+          دسترسی به سایت از IP شما امکان‌پذیر نمی‌باشد.
+          اگر فکر می‌کنید اشتباهی رخ داده است، لطفاً با ما تماس بگیرید.
+        </p>
+      </div>
+      <hr />
+      <div class="footer">
+        We may reply to your inquiries; you can contact us at
+        <a href="mailto:info@etebarco.com">info@etebarco.com</a>.<br/>
+        Sorry for any inconvenience.<br/>
+        <strong>Etebar Asset Management</strong>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

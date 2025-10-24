@@ -19,7 +19,7 @@
       margin: 0;
       background: radial-gradient(1200px 800px at 50% 0%, #12181c 0%, var(--bg) 60%);
       color: var(--text);
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Vazirmatn", "Noto Sans SC", "Noto Naskh Arabic", sans-serif;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans Arabic", "Noto Sans SC", sans-serif;
     }
     .wrap {
       min-height: 100%;
@@ -98,7 +98,7 @@
       <nav class="toolbar" aria-label="Language">
         <button class="btn" data-lang="en" aria-current="true">English</button>
         <button class="btn" data-lang="zh">中文</button>
-        <button class="btn" data-lang="fa">فارسی</button>
+        <button class="btn" data-lang="ar">العربية</button>
       </nav>
 
       <!-- ENGLISH -->
@@ -137,20 +137,20 @@
         </div>
       </div>
 
-      <!-- PERSIAN -->
-      <div class="panel" id="panel-fa" lang="fa" dir="rtl">
+      <!-- ARABIC -->
+      <div class="panel" id="panel-ar" lang="ar" dir="rtl">
         <div class="content">
-          <h1>۴۰۳ – دسترسی غیرمجاز</h1>
+          <h1>٤٠٣ – تم رفض الوصول</h1>
           <p class="lead">
-            دسترسی به سایت از IP شما امکان‌پذیر نمی‌باشد.<br>
-            اگر فکر می‌کنید اشتباهی رخ داده است، لطفاً با ما تماس بگیرید.
+            لا يمكن الوصول إلى هذا الموقع من عنوان الـ IP الخاص بك.<br>
+            إذا كنت تعتقد أن هذا خطأ، يُرجى الاتصال بنا.
           </p>
         </div>
         <hr>
         <div class="footer" dir="rtl">
-          ممکن است به پرسش‌های شما پاسخ دهیم؛ می‌توانید با ما از طریق
-          <a href="mailto:info@etebarco.com">info@etebarco.com</a> تماس بگیرید.<br>
-          بابت مشکل ایجاد شده پوزش می‌خواهیم.<br>
+          قد نرد على استفساراتك؛ يمكنك التواصل معنا عبر
+          <a href="mailto:info@etebarco.com">info@etebarco.com</a>.<br>
+          نعتذر عن أي إزعاج.<br>
           <strong>Etebar Asset Management</strong>
         </div>
       </div>
@@ -162,7 +162,7 @@
     const panels = {
       en: document.getElementById('panel-en'),
       zh: document.getElementById('panel-zh'),
-      fa: document.getElementById('panel-fa')
+      ar: document.getElementById('panel-ar')
     };
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -171,8 +171,8 @@
         const lang = btn.dataset.lang;
         Object.values(panels).forEach(p => p.classList.remove('active'));
         panels[lang].classList.add('active');
-        document.documentElement.lang = lang === 'zh' ? 'zh' : lang;
-        document.documentElement.dir = (lang === 'fa') ? 'rtl' : 'ltr';
+        document.documentElement.lang = lang;
+        document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
       });
     });
   </script>
